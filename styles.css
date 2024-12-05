@@ -1,0 +1,122 @@
+/* Reset styles for desktop mode */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3rem; /* Larger font size for desktop */
+  margin: 0;
+  color: #ffd700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Game Area */
+.game-area {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Player Sections: Horizontal Layout */
+.player-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 40px 0;
+}
+
+.player {
+  flex: 1;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.player h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #32cd32;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100px; /* Larger cards for desktop */
+  height: 150px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  font-size: 1rem; /* Adjusted font size */
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.hidden {
+  background: #444;
+  color: transparent;
+  border: 2px dashed #888;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Controls Section */
+.controls {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.2rem; /* Larger buttons for desktop */
+  padding: 15px 30px;
+  background: #ff5722;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Turn Indicator */
+.current-turn {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  color: #32cd32;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}

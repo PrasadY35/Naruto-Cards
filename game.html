@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Cards Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Naruto Cards Game Zone</h1>
+  </header>
+  <div class="game-area">
+    <!-- Player Areas -->
+    <div class="player-section">
+      <div class="player" id="player1-area">
+        <h3>Player 1</h3>
+        <div id="player1-cards" class="card-container">
+          <!-- Player 1 cards will render here -->
+        </div>
+        <button id="player1-take-cards">Player 1: Take Cards</button>
+      </div>
+      <div class="player" id="player2-area">
+        <h3>Player 2</h3>
+        <div id="player2-cards" class="card-container">
+          <!-- Player 2 cards will render here -->
+        </div>
+        <button id="player2-take-cards">Player 2: Take Cards</button>
+      </div>
+    </div>
+
+    <!-- Current Turn Indicator -->
+    <div class="current-turn" id="current-turn">Player 1's Turn</div>
+
+    <!-- Game Controls -->
+    <div class="controls">
+      <button id="end-turn">End Turn</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
