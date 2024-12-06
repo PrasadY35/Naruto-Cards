@@ -7,11 +7,15 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <!-- Background Music -->
-   <audio id="background-music" autoplay loop>
+  <!-- Background Music -->
+  <audio id="background-music" loop>
     <source src="background.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
+
+  <!-- Play Music Button -->
+  <button id="play-music-btn">Play Music</button>
+
   <header>
     <h1>Naruto Cards Game Zone</h1>
   </header>
@@ -19,9 +23,6 @@
     <!-- Player Areas -->
     <div class="player-section">
       <div class="player" id="player1-area">
-        <div id="very-rare-overlay">
-          <div id="very-rare-text"></div>
-        </div>        
         <h3>Player 1</h3>
         <div id="player1-cards" class="card-container">
           <!-- Player 1 cards will render here -->
@@ -47,5 +48,14 @@
   </div>
 
   <script src="game.js"></script>
+
+  <script>
+    // Play the music when the user clicks the play button
+    document.getElementById("play-music-btn").addEventListener("click", function() {
+      const music = document.getElementById("background-music");
+      music.play();
+      document.getElementById("play-music-btn").disabled = true; // Disable the button after play
+    });
+  </script>
 </body>
 </html>
