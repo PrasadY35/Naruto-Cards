@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throw Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Battle Ground</h1>
+  </header>
+
+  <div id="battleground" class="battleground">
+    <!-- The thrown card will be displayed here -->
+  </div>
+
+  <button id="back-to-game">Back to Game</button>
+
+  <script>
+    // Function to extract URL parameters
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        name: params.get("name"),
+        attack: params.get("attack"),
+        defense: params.get("defense"),
+      };
+    }
+
+    // Display the thrown card
+    function displayThrownCard() {
+      const cardDetails = getQueryParams();
+      const battleground = document.getElementById("battleground");
+
+      battleground.innerHTML = `
+        <div class="card battle">
+          <strong>${cardDetails.name}</strong>
+          <span>ATK: ${cardDetails.attack}</span>
+          <span>DEF: ${cardDetails.defense}</span>
+        </div>
+      `;
+    }
+
+    // Navigate back to the game
+    document.getElementById("back-to-game").addEventListener("click", () => {
+      window.location.href = "game.html";
+    });
+
+    // Initialize the page
+    displayThrownCard();
+  </script>
+</body>
+</html>
